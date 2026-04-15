@@ -1,0 +1,4 @@
+apply_setting.sh
+__pycache__/
+*.backup
+*.bak
