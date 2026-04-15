@@ -1,10 +1,5 @@
 {
-    "#" : "=repeat_last_translation",
     "#I": "{#F14}",
-    "#U": "{PLOVER:SWITCH_SYSTEM:Mejiro}{#F13}",
-    "*R": "{#BackSpace}{^}",
-    "*F": "{#Delete}{^}",
-    "PR-RP": "{#Tab}{#Return}",
-    "PR*RP": "{#Tab}{#Tab}{#Return}"
+    "#U": "{PLOVER:SWITCH_SYSTEM:Mejiro}{#F13}"
 }
 
