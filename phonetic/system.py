@@ -100,7 +100,7 @@ KEYMAPS = {
         'arpeggiate' : 'return',
         }
 }
-DICTIONARIES_ROOT = 'asset:phonetic:dictionaries/default'
+DICTIONARIES_ROOT = 'asset:phonetic:dictionaries'
 DEFAULT_DICTIONARIES = ('phonetic-user.json','phonetic-commands.json','phonetic-brief.json','phonetic-base.json','jeff-phrasing.py')
 
 
