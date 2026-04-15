@@ -1,4 +1,4 @@
-# plover_phoenix_dictionary
+# plover_phonetic_dictionary
 
 Vowel
 
