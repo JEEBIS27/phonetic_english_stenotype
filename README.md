@@ -1,24 +1,26 @@
 # plover_phoenix_dictionary
 
-Customizations
+Vowel
 
 |stroke|function|
 |------|--------|
-|`A`|`a`|
-|`AO`|`e`|
-|`E`|`i`|
-|`AEU`|`y`|
-|`AE`|`ai`|
-|`OE`|`oi`|
-|`AOE`|`ei`|
-|`AOEU`|`ii`|
-|`OEU`|`oo`|
-|`AOU`|`uu`|
-|`AU`|`au`|
-|`OU`|`ou`|
-|`EU`|`U`|
-|`U`|`u`|
-|`O`|`o`|
+|`A`|`æ`|
+|`O`|`ɒ`|
+|`U`|`ʌ`|
+|`I`|`ɪ`|
+|`AO`|`ɛ`|
+|`UI`|`ʊ`|
+|`AUI`|`y`|
+|`AI`|`aɪ`|
+|`OI`|`ɔɪ`|
+|`AOI`|`eɪ`|
+|`AOUI`|`ɪː`|
+|`OUI`|`ɒː`|
+|`AOU`|`uː juː`|
+|`AU`|`aʊ`|
+|`OU`|`oʊ`|
+
+Special consonant
 
 |stroke|function|
 |------|--------|
