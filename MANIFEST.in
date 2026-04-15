@@ -1,2 +1,2 @@
 include README.md
-include phonetic/dictionaries/default/*
+include phonetic/dictionaries/*
