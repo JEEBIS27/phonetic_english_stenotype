@@ -43,8 +43,8 @@ Commands
 |`WR-RB`|`Tab`|
 |`R-R`|`Return`|
 |`R*R`|`Return`(Capitalize next word)|
-|`PR-RP`|`Next test`(on monkeytype)|
-|`PR*RP`|`Restart test`(on monkeytype)|
+|`PR-RP`|`""`|
+|`PR*RP`|`"(Capitalized)"`|
 |`TP-PL`|`.`|
 |`KW-BG`|`,`|
 |`KW-PL`|`?`|
@@ -55,12 +55,11 @@ Commands
 |`TP*BG`|`!`(Capitalize next word)|
 |`H-F`|`-`|
 |`H*F`|`_`|
-|`PH-FP`|`-`|
-|`PH*FP`|`_`|
-|`P-P`|`Don't set space at next`|
-|`SP-LS`|`*!`|
-|`S-PD`|`*?`|
-|`*UPD`|`*<`|
+|`PH-FP`|`Delete a space between before two words`|
+|`PH*FP`|`Delete a space between before two words`(Don't set space next)|
+|`P-P`|`Don't set space next`|
+|`KPO`|`Capitalize a word from earlier`|
+|`KPO*`|`Capitalize a word from earlier and next word`|
 |`KPA`|`Capitalize next word`|
 |`KPA*`|`Capitalize next word and dot't set space at next`|
 |`KPAO`|`CapsLock next word`|
