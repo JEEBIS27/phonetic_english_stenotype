@@ -1,4 +1,4 @@
-# plover_phonetic_dictionary
+# Phonetix Theory
 
 Vowel
 
