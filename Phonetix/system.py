@@ -1,3 +1,4 @@
+
 KEYS = (
 '+-', 'S-', 'T-', 'K-', 'P-', 'W-', 'H-', 'R-',
 'A-', 'O-',
@@ -6,7 +7,7 @@ KEYS = (
 '-F', '-R', '-P', '-B', '-L', '-G', '-T', '-S', '-D', '-Z'
 )
 
-IMPLICIT_HYPHEN_KEYS = ('*')
+IMPLICIT_HYPHEN_KEYS = ('*', 'A-', 'O-', '-U', '-I')
 
 SUFFIX_KEYS = ()
 
@@ -16,15 +17,40 @@ NUMBERS = {}
 
 UNDO_STROKE_STENO = ('*')
 
-ORTHOGRAPHY_RULES = []
+ORTHOGRAPHY_RULES = [
+    # dropping silent e before endings
+    (r'^(.+[bcdfghjklmnpqrstuvz])e \^ (able|age|ed|est|ing|ings|ion|ory|ous)$', r'\1\2'),
 
-ORTHOGRAPHY_RULES_ALIASES = {}
+    # dropping e after double vowels
+    (r'^(.+[ie])e \^ (e.+)$', r'\1\2'),
 
-ORTHOGRAPHY_WORDLIST = None
+    # consonant + y pluralization
+    (r'^(.+[bcdfghjklmnpqrstvwxz])y \^ s$', r'\1ies'),
+
+    # consonant doubling
+    (r'^(.*(?:[bcdfghjklmnprstvwxyz]|qu)[aeiou])([bcdfgklmnprtvz]) \^ ((ee|[eo]i)(?:[bcdfghjklmnpqrstvwxyz].?)?)$', r'\1\2\2\3'),
+    (r'^(.*(?:[bcdfghjklmnprstvwxyz]|qu)[aeiou])([bcdfgklmnprtvz]) \^ (([aeiouy]|[ai]e)(?:[bcdfghjklmnpqrstvwxyz].?))$', r'\1\2\2\3'),
+    (r'^(.*(?:[bcdfghjklmnprstvwxyz]|qu)[aeiou])([bcdfgklmnprtvz]) \^ ([ei]?ous)$', r'\1\2\2\3'),
+    (r'^(.*(?:[bcdfghjklmnprstvwxyz]|qu)[aeiou])([bcdfgklmnprtvz]) \^ ([ai]ble)$', r'\1\2\2\3'),
+    (r'^(.*(?:[bcdfghjklmnprstvwxyz]|qu)[aeiou])([bcdfgklmnprtvz]) \^ ([ae]nce)$', r'\1\2\2\3'),
+    (r'^(.*(?:[bcdfghjklmnprstvwxyz]|qu)[aeiou])([bcdfgklmnprtvz]) \^ (e[rn]ing)$', r'\1\2\2\3'),
+    (r'^(.*(?:[bcdfghjklmnprstvwxyz]|qu)[aeiou])([bcdfgklmnprtvz]) \^ (ation)$', r'\1\2\2\3'),
+    (r'^(.*(?:[bcdfghjklmnprstvwxyz]|qu)[aeiou])([bcdfgklmnprtvz]) \^ (iness)$', r'\1\2\2\3'),
+    (r'^(.*(?:[bcdfghjklmnprstvwxyz]|qu)[aeiou])([bcdfgklmnprtvz]) \^ (ably)$', r'\1\2\2\3'),
+    (r'^(.*(?:[bcdfghjklmnprstvwxyz]|qu)[aeiou])([bcdfgklmnprtvz]) \^ (ened)$', r'\1\2\2\3'),
+    (r'^(.*(?:[bcdfghjklmnprstvwxyz]|qu)[aeiou])([bcdfgklmnprtvz]) \^ (ings)$', r'\1\2\2\3'),
+]
+
+ORTHOGRAPHY_RULES_ALIASES = {
+    'able': 'ible',
+    'ability': 'ibility',
+}
+
+ORTHOGRAPHY_WORDLIST = 'american_english_words.txt'
 
 KEYMAPS = {
         'Gemini PR': {
-        '+-'  : ('#1','#2'),
+        '+-' : ('#1','#2'),
         'S-' : ('S1-','S2-'),
         'T-' : 'T-',
         'K-' : 'K-',
@@ -49,7 +75,7 @@ KEYMAPS = {
         '-Z' : '-Z',
         },
         'Plover HID': {
-        '+-'  : ('#1','#2'),
+        '+-' : ('#1','#2'),
         'S-' : ('S1-','S2-'),
         'T-' : 'T-',
         'K-' : 'K-',
