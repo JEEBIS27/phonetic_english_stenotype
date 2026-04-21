@@ -127,7 +127,7 @@ KEYMAPS = {
         }
 }
 DICTIONARIES_ROOT = 'asset:Phonetix:dictionaries'
-DEFAULT_DICTIONARIES = ('phonetix-user.json','phonetix-commands.json','phonetix-brief.json','phonetix-preffix.json','phonetix-suffix.json','phonetix-base.json','jeff-phrasing.py')
+DEFAULT_DICTIONARIES = ('phonetix-user.json','phonetix-commands.json','phonetix-preffix.json','phonetix-suffix.json','phonetix-base.json','phonetix-brief.json','jeff-phrasing.py')
 
 
 
