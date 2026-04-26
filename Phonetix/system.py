@@ -26,6 +26,7 @@ ORTHOGRAPHY_RULES = [
 
     # consonant + y pluralization
     (r'^(.+[bcdfghjklmnpqrstvwxz])y \^ s$', r'\1ies'),
+    (r'^(.+[bcdfghjklmnpqrstvwxz])y \^ est$', r'\1iest'),
 
     # consonant doubling
     (r'^(.*(?:[bcdfghjklmnprstvwxyz]|qu)[aeiou])([bcdfgklmnprtvz]) \^ ((ee|[eo]i)(?:[bcdfghjklmnpqrstvwxyz].?)?)$', r'\1\2\2\3'),
